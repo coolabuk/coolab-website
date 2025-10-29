@@ -964,12 +964,6 @@ form textarea:focus {
   transform: none;
 }
 
-.cow-logo {
-  height: 100px;
-  width: auto;
-  max-width: 200px; /* 限制最大宽度 */
-}
-
 .text-logo {
   height: 110px;
   width: auto;
@@ -982,11 +976,6 @@ form textarea:focus {
     position: static;
     transform: none;
     gap: 0.5rem;
-  }
-  
-  .cow-logo {
-    height: 32px;
-    max-width: 40px;
   }
   
   .text-logo {
@@ -1299,4 +1288,52 @@ form textarea:focus {
   color: white;
   border: 1px solid rgba(255,255,255,0.4);
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+/* ====== Hero区域牛头Logo背景 ====== */
+.hero-wrapper {
+  background: linear-gradient(to bottom, #0093fb 0%, #32c1a0 50%, #74b47c 100%);
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* 防止logo溢出 */
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* 调整logo大小 */
+  height: 600px;
+  background-image: url('images/cow-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15; /* 半透明效果 */
+  z-index: 1;
+  pointer-events: none; /* 确保不影响点击 */
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* 确保文字在logo上面 */
+}
+
+/* 确保所有hero内容都在logo之上 */
+.hero-left,
+.hero-label,
+.hero-headline,
+.hero-copy,
+.hero-cta-row {
+  position: relative;
+  z-index: 3;
 }
