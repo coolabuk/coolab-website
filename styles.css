@@ -962,13 +962,13 @@ form textarea:focus {
 }
 
 .cow-logo {
-  height: 40px; /* 减小牛头logo大小 */
+  height: 100px;
   width: auto;
-  max-width: 50px; /* 限制最大宽度 */
+  max-width: 120px; /* 限制最大宽度 */
 }
 
 .text-logo {
-  height: 30px; /* 减小文字logo大小 */
+  height: 80px;
   width: auto;
   max-width: 120px; /* 限制最大宽度 */
 }
