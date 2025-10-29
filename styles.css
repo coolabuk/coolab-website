@@ -948,7 +948,10 @@ form textarea:focus {
 
 /* 隐藏原来的导航菜单 */
 .header-nav {
-  display: none;
+  background-color: #0093fb;
+  border-top: none;  /* 移除上边框 */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: .75rem 1rem;
 }
 
 /* ====== 新版中间双logo布局 ====== */
