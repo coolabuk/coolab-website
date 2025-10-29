@@ -1186,69 +1186,60 @@ form textarea:focus {
   margin-bottom: 2rem;
 }
 
-/* 右侧图片区域 */
+/* 右侧图片区域 - 新版 */
 .hero-right {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   max-width: 100%;
 }
 
 .hero-images-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: end;
+  gap: 2rem;
+  align-items: start;
 }
 
-.hero-card {
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 20px 40px rgba(0,147,251,0.15);
-  overflow: hidden;
+.hero-image-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
 
-.hero-card:hover {
-  transform: translateY(-5px);
+.hero-image:hover {
+  transform: scale(1.03);
 }
 
-/* 第一个卡片稍高 */
-.hero-card:nth-child(1) {
-  margin-bottom: -20px;
+.hero-image-content {
+  text-align: center;
+  color: white;
 }
 
-/* 第二个卡片稍低 */
-.hero-card:nth-child(2) {
-  margin-top: 20px;
-}
-
-.hero-card-image {
-  height: 220px;
-  background-size: cover;
-  background-position: center;
-  background-color: #f8f9fa;
-}
-
-.hero-card-body {
-  padding: 1.5rem;
-}
-
-.hero-card-title {
-  font-size: 1rem;
+.hero-image-title {
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #0a0a0a;
-  letter-spacing: -0.02em;
-  margin-bottom: .5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.hero-card-desc {
-  font-size: .85rem;
+.hero-image-desc {
+  font-size: 0.9rem;
   line-height: 1.5;
-  color: #666;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  max-width: 25ch;
 }
 
 .hero-cta-bottom {
@@ -1260,12 +1251,11 @@ form textarea:focus {
 @media (max-width: 900px) {
   .hero-images-row {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2.5rem;
   }
-
-  .hero-card:nth-child(1),
-  .hero-card:nth-child(2) {
-    margin: 0;
+  
+  .hero-image {
+    max-width: 280px;
   }
 }
 /* ====== 只修改HERO区域渐变 ====== */
@@ -1297,19 +1287,4 @@ form textarea:focus {
   color: white;
   border: 1px solid rgba(255,255,255,0.4);
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-/* 更强的融合效果 */
-.hero-card {
-  background: rgba(255,255,255,0.85);
-  border-radius: 1.5rem;
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: 
-    0 15px 35px rgba(0,147,251,0.1),
-    0 0 0 1px rgba(255,255,255,0.2) inset;
-  backdrop-filter: blur(15px);
-}
-
-.hero-card-image {
-  background-color: rgba(255,255,255,0.2);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
