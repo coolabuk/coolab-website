@@ -1122,3 +1122,168 @@ form textarea:focus {
 .menu-close:hover {
   color: #0093fb;
 }
+/* ====== 新版HERO区域 ====== */
+.hero-wrapper {
+  background: #ffffff; /* 改为白色背景 */
+  color: #0a0a0a;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* 左侧文字区域 */
+.hero-left {
+  color: #0a0a0a;
+  max-width: 500px;
+}
+
+.hero-label {
+  display: inline-block;
+  background-color: rgba(0,147,251,0.1);
+  color: #0093fb;
+  border: 1px solid rgba(0,147,251,0.3);
+  font-size: .7rem;
+  padding: .4rem .8rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.hero-headline {
+  font-size: clamp(2.2rem, 1rem + 2vw, 3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-copy {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 42ch;
+  margin-bottom: 2rem;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* 右侧图片区域 */
+.hero-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: end;
+  max-width: 100%;
+}
+
+.hero-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0,147,251,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 第一个卡片稍高 */
+.hero-card:nth-child(1) {
+  margin-bottom: -20px;
+}
+
+/* 第二个卡片稍低 */
+.hero-card:nth-child(2) {
+  margin-top: 20px;
+}
+
+.hero-card-image {
+  height: 220px; /* 增大图片高度 */
+  background-size: cover;
+  background-position: center;
+  background-color: #f8f9fa;
+}
+
+.hero-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hero-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  margin-bottom: .5rem;
+}
+
+.hero-card-desc {
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.hero-card-cta {
+  margin-top: auto;
+}
+
+/* 移动端适配 */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-right {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-card:nth-child(1),
+  .hero-card:nth-child(2) {
+    margin: 0;
+  }
+  
+  .hero-cta-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card-image {
+    height: 180px;
+  }
+  
+  .hero-headline {
+    font-size: 1.8rem;
+  }
+}
