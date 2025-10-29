@@ -837,7 +837,7 @@ form textarea:focus {
 
 /* 中间logo */
 .header-logo {
-  height: 80px;
+  height: 120px;
   width: auto;
   object-fit: contain;
 }
