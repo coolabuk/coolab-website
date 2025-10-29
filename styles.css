@@ -1006,3 +1006,31 @@ form textarea:focus {
   position: relative; /* 重要：为绝对定位的logo提供参考 */
   min-height: 80px; /* 给头部一个固定高度 */
 }
+.hero-wrapper {
+  background: linear-gradient(135deg, #0093fb 0%, #0066cc 100%);
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 确保所有文字在深色背景上可见 */
+.hero-left {
+  color: white;
+}
+
+.hero-headline {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-copy {
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-label {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
