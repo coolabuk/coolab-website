@@ -948,9 +948,9 @@ form textarea:focus {
 
 /* 隐藏原来的导航菜单 */
 .header-nav {
-  background-color: #0093fb;
+  background-color: #ffffff;
   border-top: none;  /* 移除上边框 */
-  border-bottom: none;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   padding: .75rem 1rem;
 }
 
