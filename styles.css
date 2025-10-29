@@ -1265,3 +1265,69 @@ form textarea:focus {
     margin: 0;
   }
 }
+/* ====== 渐变顶部和Hero区域 ====== */
+.site-header {
+  width: 100%;
+  background: linear-gradient(135deg, #0093fb 0%, #32c1a0 50%, #74b47c 100%);
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.header-top {
+  background: transparent;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+.hero-wrapper {
+  background: linear-gradient(135deg, #0093fb 0%, #32c1a0 50%, #74b47c 100%);
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+/* 导航菜单背景改为白色，与渐变形成对比 */
+.header-nav {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: .75rem 1rem;
+}
+
+/* 调整hero区域文字颜色以确保可读性 */
+.hero-left {
+  color: white;
+}
+
+.hero-headline {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-copy {
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.hero-label {
+  background-color: rgba(255,255,255,0.25);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 汉堡菜单图标颜色调整为白色 */
+.hamburger-line {
+  background-color: white;
+}
+
+/* 社交媒体图标颜色调整为白色 */
+.social-icon {
+  color: white;
+}
+
+/* 确保logo在渐变背景上清晰可见 */
+.logo-group {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
