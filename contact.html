@@ -49,9 +49,14 @@
     </div>
   </div>
 
-<!-- 下拉菜单 - 简化版 -->
+<!-- 菜单遮罩层 -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- 左侧下拉菜单 -->
 <div class="dropdown-menu" id="dropdownMenu">
-  <div class="dropdown-nav" style="grid-template-columns: 1fr; text-align: center;">
+  <button class="menu-close" id="menuClose">×</button>
+  
+  <div class="dropdown-nav">
     <ul class="nav-links-vertical">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -165,37 +170,67 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-<script>
-  // 汉堡菜单功能
-  const hamburgerMenu = document.getElementById('hamburgerMenu');
-  const dropdownMenu = document.getElementById('dropdownMenu');
 
-  hamburgerMenu.addEventListener('click', function() {
-    dropdownMenu.classList.toggle('active');
-    
-    // 添加动画效果
-    const lines = this.querySelectorAll('.hamburger-line');
-    if (dropdownMenu.classList.contains('active')) {
-      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      lines[1].style.opacity = '0';
-      lines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
-      lines[0].style.transform = 'none';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'none';
+  <!-- 先添加汉堡菜单HTML结构 -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <button class="menu-close" id="menuClose">×</button>
+    <div class="dropdown-nav">
+      <ul class="nav-links-vertical">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 然后添加新的JavaScript代码 -->
+  <script>
+    // 汉堡菜单功能
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuClose = document.getElementById('menuClose');
+
+    function openMenu() {
+      dropdownMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
-  });
 
-  // 点击页面其他区域关闭菜单
-  document.addEventListener('click', function(event) {
-    if (!hamburgerMenu.contains(event.target) && !dropdownMenu.contains(event.target)) {
+    function closeMenu() {
       dropdownMenu.classList.remove('active');
-      const lines = hamburgerMenu.querySelectorAll('.hamburger-line');
-      lines[0].style.transform = 'none';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'none';
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     }
-  });
-</script>
+
+    // 事件监听
+    if (hamburgerMenu) {
+      hamburgerMenu.addEventListener('click', openMenu);
+    }
+    
+    if (menuClose) {
+      menuClose.addEventListener('click', closeMenu);
+    }
+    
+    if (menuOverlay) {
+      menuOverlay.addEventListener('click', closeMenu);
+    }
+
+    // 点击菜单链接也关闭菜单
+    document.querySelectorAll('.nav-links-vertical a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ESC键关闭菜单
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    });
+  </script>
 </body>
 </html>
