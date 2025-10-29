@@ -86,54 +86,54 @@
 </div>
 
         <!-- FORM START -->
-        <form 
-          action="https://example.com/form-endpoint" 
-          method="POST" 
-          style="display:grid;grid-template-columns:1fr;gap:1rem;font-size:.9rem;color:#1a1a1a;"
-        >
-          <!-- TYPE -->
-          <div style="display:grid;gap:.4rem;">
-            <label for="enquiryType" style="font-weight:500;color:#444;">Enquiry type</label>
-            <select id="enquiryType" name="enquiryType" style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-              <option value="new-order">New order enquiry</option>
-              <option value="reorder">Reorder / repeat order</option>
-            </select>
-          </div>
+<form 
+  action="https://example.com/form-endpoint" 
+  method="POST" 
+  style="display:grid;grid-template-columns:1fr;gap:1.5rem;font-size:.9rem;color:#1a1a1a;margin-top:1.5rem;"
+>
+  <!-- TYPE -->
+  <div style="display:grid;gap:.5rem;">
+    <label for="enquiryType" style="font-weight:600;color:#444;">Enquiry type</label>
+    <select id="enquiryType" name="enquiryType" style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+      <option value="new-order">New order enquiry</option>
+      <option value="reorder">Reorder / repeat order</option>
+    </select>
+  </div>
 
-          <!-- NAME -->
-          <div style="display:grid;gap:.4rem;">
-            <label for="name" style="font-weight:500;color:#444;">Your name</label>
-            <input id="name" name="name" type="text" required placeholder="Your name or business"
-              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-          </div>
+  <!-- NAME -->
+  <div style="display:grid;gap:.5rem;">
+    <label for="name" style="font-weight:600;color:#444;">Your name</label>
+    <input id="name" name="name" type="text" required placeholder="Your name or business"
+      style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+  </div>
 
-          <!-- EMAIL -->
-          <div style="display:grid;gap:.4rem;">
-            <label for="email" style="font-weight:500;color:#444;">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com"
-              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-          </div>
+  <!-- EMAIL -->
+  <div style="display:grid;gap:.5rem;">
+    <label for="email" style="font-weight:600;color:#444;">Email</label>
+    <input id="email" name="email" type="email" required placeholder="you@example.com"
+      style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+  </div>
 
-          <!-- PHONE -->
-          <div style="display:grid;gap:.4rem;">
-            <label for="phone" style="font-weight:500;color:#444;">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" placeholder="+44..."
-              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-          </div>
+  <!-- PHONE -->
+  <div style="display:grid;gap:.5rem;">
+    <label for="phone" style="font-weight:600;color:#444;">Phone (optional)</label>
+    <input id="phone" name="phone" type="tel" placeholder="+44..."
+      style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+  </div>
 
-          <!-- MESSAGE -->
-          <div style="display:grid;gap:.4rem;">
-            <label for="message" style="font-weight:500;color:#444;">Message</label>
-            <textarea id="message" name="message" rows="4" required placeholder="What do you need? Quantity? Date? Flavours?"
-              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;line-height:1.4;"></textarea>
-          </div>
+  <!-- MESSAGE -->
+  <div style="display:grid;gap:.5rem;">
+    <label for="message" style="font-weight:600;color:#444;">Message</label>
+    <textarea id="message" name="message" rows="4" required placeholder="What do you need? Quantity? Date? Flavours?"
+      style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;line-height:1.4;"></textarea>
+  </div>
 
-          <!-- SUBMIT -->
-          <button type="submit" class="btn-primary" style="width:max-content; margin: 0 auto;">
-            Send enquiry →
-          </button>
-        </form>
-        <!-- FORM END -->
+  <!-- SUBMIT -->
+  <button type="submit" class="btn-primary" style="width:max-content; margin: 0 auto;">
+    Send enquiry →
+  </button>
+</form>
+<!-- FORM END -->
 
         <div class="contact-note" style="margin-top:1.5rem;">
           We'll reply as soon as possible.  
