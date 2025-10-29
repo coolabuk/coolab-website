@@ -957,7 +957,7 @@ form textarea:focus {
   align-items: center;
   gap: 0.8rem;
   position: absolute;
-  left: 120px; /* 靠左位置 */
+  left: 150px; /* 靠左位置 */
   transform: none;
 }
 
@@ -968,7 +968,7 @@ form textarea:focus {
 }
 
 .text-logo {
-  height: 80px;
+  height: 120px;
   width: auto;
   max-width: 500px; /* 限制最大宽度 */
 }
