@@ -1185,11 +1185,17 @@ form textarea:focus {
 
 /* 右侧图片区域 */
 .hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+.hero-images-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   align-items: end;
-  max-width: 100%;
 }
 
 .hero-card {
@@ -1218,7 +1224,7 @@ form textarea:focus {
 }
 
 .hero-card-image {
-  height: 220px; /* 增大图片高度 */
+  height: 220px;
   background-size: cover;
   background-position: center;
   background-color: #f8f9fa;
@@ -1226,9 +1232,6 @@ form textarea:focus {
 
 .hero-card-body {
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 
 .hero-card-title {
@@ -1243,27 +1246,16 @@ form textarea:focus {
   font-size: .85rem;
   line-height: 1.5;
   color: #666;
-  margin-bottom: 1rem;
-  flex-grow: 1;
 }
 
-.hero-card-cta {
-  margin-top: auto;
+.hero-cta-bottom {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /* 移动端适配 */
 @media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .hero-left {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-right {
+  .hero-images-row {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -1271,19 +1263,5 @@ form textarea:focus {
   .hero-card:nth-child(1),
   .hero-card:nth-child(2) {
     margin: 0;
-  }
-  
-  .hero-cta-row {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-card-image {
-    height: 180px;
-  }
-  
-  .hero-headline {
-    font-size: 1.8rem;
   }
 }
