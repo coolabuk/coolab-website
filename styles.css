@@ -955,7 +955,7 @@ form textarea:focus {
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   position: absolute;
   left: 80px; /* 靠左位置 */
   transform: none;
