@@ -706,7 +706,7 @@ form textarea:focus {
 }
 
 .header-logo {
-  height: 180px;
+  height: 150px;
   width: auto;
   object-fit: contain;
   /* tweak if logo looks too big/small */
@@ -786,4 +786,167 @@ form textarea:focus {
   .header-menu a {
     font-size: .95rem;
   }
+}
+/* ====== 新版顶部导航 ====== */
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.15);
+  background-color: #ffffff;
+  position: relative;
+}
+
+.header-top {
+  background-color: #0093fb;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.header-top-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 左侧汉堡菜单 */
+.hamburger-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* 中间logo */
+.header-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* 右侧社交媒体图标 */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* 下拉菜单 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.nav-column h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0093fb;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.nav-links-vertical {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links-vertical li {
+  margin-bottom: 0.8rem;
+}
+
+.nav-links-vertical a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.3rem 0;
+}
+
+.nav-links-vertical a:hover {
+  color: #0093fb;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .header-logo {
+    height: 60px;
+  }
+  
+  .social-icons {
+    gap: 0.8rem;
+  }
+  
+  .social-icon {
+    font-size: 1.1rem;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .dropdown-nav {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* 隐藏原来的导航菜单 */
+.header-nav {
+  display: none;
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products — COOLAB</title>
+  <title>Blog — COOLAB</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -70,115 +70,26 @@
   </div>
 </header>
 
-  <!-- INTRO -->
   <section class="container" style="margin-top:2rem;">
-    <h1 class="section-title">Our Creations</h1>
+    <h1 class="section-title">Blog</h1>
     <p class="section-desc">
-      COOLAB designs and produces creative 3D ice cream in Edinburgh.  
-      We turn stories, heritage and visual identity into edible objects — for festivals, venues, launches and cultural experiences.
+      Coming soon! We'll share stories about our 3D ice cream creations and cultural inspirations.
     </p>
-  </section>
-
-  <!-- PRODUCT GRID -->
-  <section class="container" style="margin-top:2rem;">
-    <div class="grid-products">
-
-      <!-- Popsicle -->
-      <div class="card">
-        <div class="card-img" style="background-image:url('images/sample-raspberry.jpg');"></div>
-        <div class="card-body">
-          <h3>3D Ice Cream Popsicle</h3>
-          <p>
-            Sculpted, handheld 3D ice creams on eco-friendly bamboo sticks.  
-            Each design is inspired by cultural icons — architecture, symbols, characters, heritage — and produced as a limited run.
-          </p>
-          <p style="font-size:.8rem;color:#0a0a0a;margin-top:.75rem;line-height:1.4;">
-            Perfect for: festivals, pop-ups, museum shops, brand activations, tourism experiences, collectibles.
-          </p>
-        </div>
-      </div>
-
-      <!-- Plated Dessert -->
-      <div class="card">
-        <div class="card-img" style="background-image:url('images/sample-white-choc.jpg');"></div>
-        <div class="card-body">
-          <h3>Plated 3D Ice Cream Dessert</h3>
-          <p>
-            A restaurant-style 3D ice cream composition designed for plate service.  
-            Structured forms, layered textures, custom flavour profiles — presented as a complete dessert.
-          </p>
-          <p style="font-size:.8rem;color:#0a0a0a;margin-top:.75rem;line-height:1.4;">
-            Perfect for: venue menus, dining experiences, private events, tasting menus, collaborations.
-          </p>
-        </div>
-      </div>
-
+    
+    <div class="collab-box" style="margin-top:2rem;">
+      <p>📝 <strong>Blog content coming soon</strong></p>
+      <p>We're working on exciting stories about our ice cream journey!</p>
+      <a href="index.html" class="btn-outline">Back to Home</a>
     </div>
   </section>
 
-  <!-- COLLAB / CUSTOM -->
-  <section class="container" style="margin-top:3rem;">
-    <div class="collab-box">
-      <h2>Custom & Collaboration</h2>
-      <p>
-        We collaborate with cultural venues, festivals, tourism partners and hospitality teams to design exclusive 3D ice cream concepts.
-      </p>
-      <ul class="collab-list">
-        <li>Exclusive popsicle design for your venue / brand launch</li>
-        <li>Limited-edition collectibles for events & festivals</li>
-        <li>Signature plated dessert themed around your story</li>
-        <li>Food-as-story experiences built for your audience</li>
-      </ul>
-
-      <div style="margin-top:1rem;">
-        <a href="contact.html" class="btn-primary">Enquire for partnership →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
     <div>© <span id="year"></span> COOLAB — Creative 3D Ice Cream</div>
-    <div style="margin-top:.5rem;">
-      <a href="about.html">About</a> ·
-      <a href="contact.html">Contact</a>
-    </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-<script>
-  // 汉堡菜单功能
-  const hamburgerMenu = document.getElementById('hamburgerMenu');
-  const dropdownMenu = document.getElementById('dropdownMenu');
 
-  hamburgerMenu.addEventListener('click', function() {
-    dropdownMenu.classList.toggle('active');
-    
-    // 添加动画效果
-    const lines = this.querySelectorAll('.hamburger-line');
-    if (dropdownMenu.classList.contains('active')) {
-      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      lines[1].style.opacity = '0';
-      lines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
-      lines[0].style.transform = 'none';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'none';
-    }
-  });
-
-  // 点击页面其他区域关闭菜单
-  document.addEventListener('click', function(event) {
-    if (!hamburgerMenu.contains(event.target) && !dropdownMenu.contains(event.target)) {
-      dropdownMenu.classList.remove('active');
-      const lines = hamburgerMenu.querySelectorAll('.hamburger-line');
-      lines[0].style.transform = 'none';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'none';
-    }
-  });
-</script>
 </body>
 </html>
