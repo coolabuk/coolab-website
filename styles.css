@@ -1298,3 +1298,16 @@ form textarea:focus {
   border: 1px solid rgba(255,255,255,0.4);
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+/* ====== 修复header和hero之间的白线 ====== */
+.site-header {
+  border-bottom: none !important;
+  background-color: #0093fb !important;
+}
+
+.header-top {
+  border: none !important;
+}
+
+.hero-wrapper {
+  margin-top: 0 !important;
+}
