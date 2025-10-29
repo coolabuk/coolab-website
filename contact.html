@@ -69,90 +69,87 @@
 </div>
 </header>
 
-  <section class="container">
-    <div class="contact-card" style="max-width:520px;">
-      <h2>Contact COOLAB</h2>
-      <p>
-        New wholesale enquiry? Need a custom flavour for your café?
-        Placing a repeat order? Tell us a bit below 👇
-      </p>
+    <section class="container">
+    <!-- 居中的联系卡片 -->
+    <div style="display: flex; justify-content: center;">
+      <div class="contact-card" style="max-width:520px; width:100%;">
+        <h2>Contact COOLAB</h2>
+        <p>
+          New wholesale enquiry? Need a custom flavour for your café?
+          Placing a repeat order? Tell us a bit below 👇
+        </p>
 
-      <!-- FORM START -->
-      <!--
-        IMPORTANT:
-        After we deploy to Netlify/Formspree, you'll replace the action=""
-        with the endpoint they give you. That service will forward all
-        submissions to info@coolab.co.uk.
-      -->
-      <form 
-        action="https://example.com/form-endpoint" 
-        method="POST" 
-        style="display:grid;grid-template-columns:1fr;gap:1rem;font-size:.9rem;color:#1a1a1a;"
-      >
-        <!-- TYPE -->
-        <div style="display:grid;gap:.4rem;">
-          <label for="enquiryType" style="font-weight:500;color:#444;">Enquiry type</label>
-          <select id="enquiryType" name="enquiryType" style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-            <option value="new-order">New order enquiry</option>
-            <option value="reorder">Reorder / repeat order</option>
-          </select>
+        <!-- FORM START -->
+        <form 
+          action="https://example.com/form-endpoint" 
+          method="POST" 
+          style="display:grid;grid-template-columns:1fr;gap:1rem;font-size:.9rem;color:#1a1a1a;"
+        >
+          <!-- TYPE -->
+          <div style="display:grid;gap:.4rem;">
+            <label for="enquiryType" style="font-weight:500;color:#444;">Enquiry type</label>
+            <select id="enquiryType" name="enquiryType" style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+              <option value="new-order">New order enquiry</option>
+              <option value="reorder">Reorder / repeat order</option>
+            </select>
+          </div>
+
+          <!-- NAME -->
+          <div style="display:grid;gap:.4rem;">
+            <label for="name" style="font-weight:500;color:#444;">Your name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name or business"
+              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+          </div>
+
+          <!-- EMAIL -->
+          <div style="display:grid;gap:.4rem;">
+            <label for="email" style="font-weight:500;color:#444;">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com"
+              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+          </div>
+
+          <!-- PHONE -->
+          <div style="display:grid;gap:.4rem;">
+            <label for="phone" style="font-weight:500;color:#444;">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" placeholder="+44..."
+              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+          </div>
+
+          <!-- MESSAGE -->
+          <div style="display:grid;gap:.4rem;">
+            <label for="message" style="font-weight:500;color:#444;">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="What do you need? Quantity? Date? Flavours?"
+              style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;line-height:1.4;"></textarea>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn-primary" style="width:max-content; margin: 0 auto;">
+            Send enquiry →
+          </button>
+        </form>
+        <!-- FORM END -->
+
+        <div class="contact-note" style="margin-top:1.5rem;">
+          We'll reply as soon as possible.  
+          For urgent event catering, please call or text.
         </div>
 
-        <!-- NAME -->
-        <div style="display:grid;gap:.4rem;">
-          <label for="name" style="font-weight:500;color:#444;">Your name</label>
-          <input id="name" name="name" type="text" required placeholder="Your name or business"
-            style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
+        <div style="margin-top:1.25rem;font-size:.8rem;color:#777;line-height:1.4;">
+          Or reach us directly:  
+          <div class="contact-line" style="margin-top:.4rem;">
+            <span class="label" style="min-width:60px;">Email</span>
+            <span>info@coolab.co.uk</span>
+          </div>
+          <div class="contact-line">
+            <span class="label" style="min-width:60px;">Phone</span>
+            <span>0131 237 9090</span>  <!-- 更新电话号码 -->
+          </div>
         </div>
 
-        <!-- EMAIL -->
-        <div style="display:grid;gap:.4rem;">
-          <label for="email" style="font-weight:500;color:#444;">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com"
-            style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-        </div>
-
-        <!-- PHONE -->
-        <div style="display:grid;gap:.4rem;">
-          <label for="phone" style="font-weight:500;color:#444;">Phone (optional)</label>
-          <input id="phone" name="phone" type="tel" placeholder="+44..."
-            style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;">
-        </div>
-
-        <!-- MESSAGE -->
-        <div style="display:grid;gap:.4rem;">
-          <label for="message" style="font-weight:500;color:#444;">Message</label>
-          <textarea id="message" name="message" rows="4" required placeholder="What do you need? Quantity? Date? Flavours?"
-            style="padding:.6rem .7rem;border-radius:.5rem;border:1px solid rgba(0,0,0,0.15);font-size:.9rem;line-height:1.4;"></textarea>
-        </div>
-
-        <!-- SUBMIT -->
-        <button type="submit" class="btn-primary" style="width:max-content;">
-          Send enquiry →
-        </button>
-      </form>
-      <!-- FORM END -->
-
-      <div class="contact-note" style="margin-top:1.5rem;">
-        We'll reply as soon as possible.  
-        For urgent event catering, please call or text.
       </div>
-
-      <div style="margin-top:1.25rem;font-size:.8rem;color:#777;line-height:1.4;">
-        Or reach us directly:  
-        <div class="contact-line" style="margin-top:.4rem;">
-          <span class="label" style="min-width:60px;">Email</span>
-          <span>info@coolab.co.uk</span>
-        </div>
-        <div class="contact-line">
-          <span class="label" style="min-width:60px;">Phone</span>
-          <span>+44 (0)7xxx xxx xxx</span>
-        </div>
-      </div>
-
     </div>
 
-    <div style="margin-top:2rem;font-size:.8rem;color:#777;max-width:60ch;">
+    <div style="margin-top:2rem;font-size:.8rem;color:#777;max-width:60ch; text-align: center; margin-left: auto; margin-right: auto;">
       We currently operate in/around Edinburgh.
       Delivery outside the city may require minimum order or notice.
     </div>
