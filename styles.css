@@ -1298,3 +1298,18 @@ form textarea:focus {
   border: 1px solid rgba(255,255,255,0.4);
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+/* 更强的融合效果 */
+.hero-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 
+    0 15px 35px rgba(0,147,251,0.1),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
+  backdrop-filter: blur(15px);
+}
+
+.hero-card-image {
+  background-color: rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
