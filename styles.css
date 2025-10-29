@@ -964,13 +964,13 @@ form textarea:focus {
 .cow-logo {
   height: 100px;
   width: auto;
-  max-width: 120px; /* 限制最大宽度 */
+  max-width: 200px; /* 限制最大宽度 */
 }
 
 .text-logo {
   height: 80px;
   width: auto;
-  max-width: 120px; /* 限制最大宽度 */
+  max-width: 500px; /* 限制最大宽度 */
 }
 
 /* 移动端适配 */
