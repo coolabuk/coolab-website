@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — COOLAB</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span>COOLAB</span>
+        <span class="brand-badge">small batch</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- OUR STORY -->
+  <section class="container" style="margin-top:2rem;">
+    <h1 class="section-title">Our Story</h1>
+    <p class="section-desc">
+      COOLAB began in Edinburgh, born from the idea that ice cream should taste 
+      like real ingredients — not artificial flavourings.
+    </p>
+
+    <p style="font-size:.95rem;color:#444;max-width:65ch;line-height:1.6;margin-top:1rem;">
+      What started as a small kitchen experiment became a micro ice cream lab
+      focused on honest, small-batch production. We slow-cook our bases,
+      use seasonal produce from local suppliers, and constantly test new pairings.  
+      We’re not chasing mass production — just flavour that feels personal.
+    </p>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="container" style="margin-top:3rem;">
+    <h2 class="section-title">Our Philosophy</h2>
+    <div class="collab-box" style="background-color:#fffef9;">
+      <p>
+        <strong>COOLAB</strong> stands for curiosity, care, and craft.  
+        We believe food should connect people, not just fill shelves.
+      </p>
+      <ul class="collab-list">
+        <li>🍦 <strong>Small-batch only</strong> — quality over quantity.</li>
+        <li>🌿 <strong>Real ingredients</strong> — fruit, milk, and cream, not syrups.</li>
+        <li>🧊 <strong>Craft process</strong> — hand-cooked bases and custom textures.</li>
+        <li>🤝 <strong>Collaboration</strong> — we grow by creating together.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SLOGAN -->
+  <section class="container" style="margin-top:3rem;text-align:center;">
+    <div class="tagline-pill">Slogan</div>
+    <h2 style="font-size:1.6rem;font-weight:600;letter-spacing:-0.04em;margin-bottom:.5rem;">
+      “Less factory. More flavour.”
+    </h2>
+    <p style="color:#666;font-size:.95rem;">
+      Every scoop tells a story — crafted by hand, shared with care.
+    </p>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="container" style="margin-top:3rem;">
+    <h2 class="section-title">Our Partners</h2>
+    <p class="section-desc">
+      We’re proud to work with local cafés, restaurants and events that care about
+      authenticity and craft.
+    </p>
+
+    <div class="grid-products">
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/partner-coffee.jpg');"></div>
+        <div class="card-body">
+          <h3>Little Finch Café</h3>
+          <p>House dessert: COOLAB Raspberry Cream.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/partner-restaurant.jpg');"></div>
+        <div class="card-body">
+          <h3>North Street Dining</h3>
+          <p>Menu pairing featuring Sea Salt Lemon Honey.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/partner-market.jpg');"></div>
+        <div class="card-body">
+          <h3>Edinburgh Artisan Market</h3>
+          <p>Monthly stall · limited small tubs + collab flavours.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© <span id="year"></span> COOLAB. Small batch ice cream.</div>
+    <div style="margin-top:.5rem;">
+      <a href="products.html">Products</a>
+      ·
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

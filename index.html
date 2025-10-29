@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COOLAB — Small batch ice cream</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span>COOLAB</span>
+        <span class="brand-badge">small batch</span>
+      </a>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-text">
+      <div class="tagline-pill">Handmade in small batches</div>
+      <h1>COOLAB — artisan ice cream crafted in Edinburgh</h1>
+      <p>
+        We create limited-run flavours with real fruit, proper cream, and no shortcuts. 
+        For cafés, events, and people who actually care how dessert tastes.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn-primary" href="products.html">See flavours</a>
+        <a class="btn-outline" href="about.html">Who we are →</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="card" style="max-width:360px;margin:0 auto;">
+        <div class="card-img" style="background-image:url('images/sample-strawberry.jpg');">
+        </div>
+        <div class="card-body">
+          <h3>Strawberry Cream</h3>
+          <p>Scottish strawberries, double cream, slow-cooked base. Summer in a tub.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS PREVIEW -->
+  <section class="container">
+    <h2 class="section-title">Signature flavours</h2>
+    <p class="section-desc">Small seasonal menu. When it’s gone, it’s gone.</p>
+
+    <div class="grid-products">
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-raspberry.jpg');"></div>
+        <div class="card-body">
+          <h3>Raspberry Cream</h3>
+          <p>Fresh raspberries and rich cream. Tangy + silky.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-white-choc.jpg');"></div>
+        <div class="card-body">
+          <h3>White Chocolate</h3>
+          <p>Velvety, not too sweet. Real cocoa butter warmth.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-salty-lemon.jpg');"></div>
+        <div class="card-body">
+          <h3>Sea Salt Lemon Honey</h3>
+          <p>Citrus pop, light salt, floral honey finish.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem;">
+      <a class="btn-outline" href="products.html">Full product list →</a>
+    </div>
+  </section>
+
+  <!-- CALL OUT -->
+  <section class="container" style="margin-top:3rem;">
+    <div class="collab-box">
+      <h2>Wholesale · Collab · Private label</h2>
+      <p>
+        Want a flavour made just for your café / restaurant / event?
+        We develop custom recipes and supply in small to medium batch volumes.
+      </p>
+      <ul class="collab-list">
+        <li>House signature flavours for cafés</li>
+        <li>Dessert pairing for restaurants</li>
+        <li>Limited pop-up / markets / events</li>
+        <li>White label production</li>
+      </ul>
+
+      <div style="margin-top:1rem;">
+        <a class="btn-primary" href="about.html">Work with COOLAB →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© <span id="year"></span> COOLAB. Small batch ice cream.</div>
+    <div style="margin-top:.5rem;">
+      <a href="contact.html">Contact us</a>
+      ·
+      <a href="about.html">About</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

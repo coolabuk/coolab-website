@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — COOLAB</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span>COOLAB</span>
+        <span class="brand-badge">small batch</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h1 class="section-title">Our flavours</h1>
+    <p class="section-desc">
+      Rotating menu. Real ingredients. We don't fake colours or use “mystery base”.
+    </p>
+
+    <div class="grid-products">
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-raspberry.jpg');"></div>
+        <div class="card-body">
+          <h3>Raspberry Cream</h3>
+          <p>Fresh raspberries cooked down slowly, blended with cream for a balanced tart/smooth profile.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-strawberry.jpg');"></div>
+        <div class="card-body">
+          <h3>Strawberry Cream</h3>
+          <p>Scottish strawberries, double cream, low overrun texture. This is our summer hero.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-white-choc.jpg');"></div>
+        <div class="card-body">
+          <h3>White Chocolate</h3>
+          <p>Slow-melt mouthfeel, gentle sweetness, perfect with espresso or dark berries.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-image:url('images/sample-salty-lemon.jpg');"></div>
+        <div class="card-body">
+          <h3>Sea Salt Lemon Honey</h3>
+          <p>Lemon & lime juice, sea salt, and honey. Bright, grown-up citrus.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:2rem;font-size:.8rem;color:#777;max-width:60ch;">
+      Seasonal / limited flavours may sell out. For wholesale tubs or custom recipes,
+      please see <a href="about.html" style="color:#1a1a1a;font-weight:500;">About Us</a>.
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> COOLAB. Small batch ice cream.</div>
+    <div style="margin-top:.5rem;">
+      <a href="contact.html">Contact us</a>
+      ·
+      <a href="about.html">About</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
