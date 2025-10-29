@@ -1125,139 +1125,151 @@ form textarea:focus {
 .menu-close:hover {
   color: #0093fb;
 }
-/* ====== 新版HERO区域 ====== */
+
+/* ====== 简洁版HERO区域 ====== */
 .hero-wrapper {
-  background: #ffffff; /* 改为白色背景 */
-  color: #0a0a0a;
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: linear-gradient(to bottom, #0093fb 0%, #32c1a0 50%, #74b47c 100%);
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  text-align: center; /* 整体居中 */
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* 左侧文字区域 */
+/* 左侧文字区域 - 居中 */
 .hero-left {
-  color: #0a0a0a;
-  max-width: 500px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
 }
 
 .hero-label {
   display: inline-block;
-  background-color: rgba(0,147,251,0.1);
-  color: #0093fb;
-  border: 1px solid rgba(0,147,251,0.3);
-  font-size: .7rem;
-  padding: .4rem .8rem;
+  background-color: rgba(255,255,255,0.25);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  font-size: .8rem;
+  padding: .5rem 1rem;
   border-radius: .5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: .04em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero-headline {
-  font-size: clamp(2.2rem, 1rem + 2vw, 3rem);
+  font-size: clamp(2.5rem, 1.5rem + 2vw, 3.5rem);
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.04em;
-  color: #0a0a0a;
+  color: white;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .hero-copy {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: #555;
-  max-width: 42ch;
-  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.95);
+  max-width: 50ch;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
 .hero-cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
-/* 右侧图片区域 - 新版 */
+/* 移除hero-right部分 */
 .hero-right {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 100%;
+  display: none;
 }
 
-.hero-images-row {
+/* ====== 产品展示部分 ====== */
+.products-showcase {
+  padding: 5rem 0;
+  background-color: var(--bg-page);
+}
+
+.products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: start;
+  margin-top: 3rem;
 }
 
-.hero-image-item {
+.product-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
+  gap: 1.5rem;
 }
 
-.hero-image {
+.product-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.hero-image:hover {
-  transform: scale(1.03);
+.product-image:hover {
+  transform: translateY(-5px);
 }
 
-.hero-image-content {
-  text-align: center;
-  color: white;
+.product-content {
+  max-width: 400px;
 }
 
-.hero-image-title {
-  font-size: 1.1rem;
+.product-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  color: white;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
-.hero-image-desc {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.9);
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  max-width: 25ch;
-}
-
-.hero-cta-bottom {
-  text-align: center;
-  margin-top: 1rem;
+.product-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dim);
 }
 
 /* 移动端适配 */
 @media (max-width: 900px) {
-  .hero-images-row {
+  .products-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 4rem;
   }
   
-  .hero-image {
-    max-width: 280px;
+  .hero-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .hero-headline {
+    font-size: 2.2rem;
   }
 }
+
 /* ====== 只修改HERO区域渐变 ====== */
 .hero-wrapper {
   background: linear-gradient(to bottom, #0093fb 0%, #32c1a0 50%, #74b47c 100%);
